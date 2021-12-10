@@ -12,7 +12,7 @@ export const NotFound = () => {
       </div>
       <Link
         to="/"
-        className="text-xl font-bold bg-green-300 cursor-pointer px-3 mt-3 rounded-full transition duration-300 hover:ring-2 hover:ring-green-300 hover:bg-white text-green-900">
+        className="text-xl font-bold bg-emerald-300 cursor-pointer px-3 mt-3 rounded-full transition duration-300 hover:ring-2 hover:ring-emerald-300 hover:bg-white text-emerald-900">
         Let's get back Home!
       </Link>
     </div>

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const DetailedItem = ({
+export const SectionItem = ({
   title,
   association,
   location,
@@ -13,13 +13,13 @@ export const DetailedItem = ({
     <div className="py-2">
       <div className="flex sm:flex-row flex-col justify-between items-start">
         <div>
-          <div className="text-2xl font-bold text-green-900">{title}</div>
+          <div className="text-2xl font-bold text-emerald-700">{title}</div>
           <div className="sm:text-xl text-lg font-semibold">{association}</div>
         </div>
         <div className="sm:text-right text-sm -space-y-0.5">
-          <div className="text-green-600">{from}</div>
-          <div className="text-green-600">{to}</div>
-          <div className="text-green-600">{location}</div>
+          <div className="text-emerald-600">{from}</div>
+          <div className="text-emerald-600">{to}</div>
+          <div className="text-emerald-600">{location}</div>
         </div>
       </div>
       <div>

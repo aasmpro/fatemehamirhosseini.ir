@@ -1,16 +1,13 @@
 module.exports = {
   mode: "jit",
-  purge: {
-    enabled: true,
-    content: [
-      "./src/data/*.js",
-      "./src/views/*.{js,jsx}",
-      "./src/components/*.{js,jsx}",
-      "./src/Main.jsx",
-      "./src/index.js",
-    ],
-  },
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/data/*.js",
+    "./src/views/*.{js,jsx}",
+    "./src/components/*.{js,jsx}",
+    "./src/Main.jsx",
+    "./src/index.js",
+  ],
+  darkMode: "media", // 'media' or 'class'
   theme: {
     extend: {
       colors: {
