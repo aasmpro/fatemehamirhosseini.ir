@@ -1,0 +1,74 @@
+@font-face {
+  font-family: JBM;
+  font-style: normal;
+  font-weight: 700;
+  src: url("JetBrainsMono-Bold.ttf") format("truetype");
+  src: url("JetBrainsMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: JBM;
+  font-style: normal;
+  font-weight: 800;
+  src: url("JetBrainsMono-ExtraBold.ttf") format("truetype");
+  src: url("JetBrainsMono-ExtraBold.woff2") format("woff2");
+}
+
+*,
+::after,
+::before {
+  background-color: #ffffff;
+  color: #000000;
+  font-family: JBM;
+  border: 0 solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  box-sizing: border-box;
+  letter-spacing: -0.6px;
+  word-spacing: -3px;
+  line-height: 1.4;
+}
+
+html,
+body {
+  overflow: hidden;
+}
+
+.content {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  user-select: none;
+}
+
+.content .text-container {
+  width: 270px;
+}
+
+.content .text-container .text-404 {
+  font-weight: 800;
+  font-size: 8rem;
+  line-height: 1;
+}
+
+.content .text-container .text {
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.content .link {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  background-color: rgba(110, 231, 183, 1);
+  color: rgba(6, 78, 59, 1);
+  border-radius: 9999px;
+  margin-top: 0.75rem;
+}
