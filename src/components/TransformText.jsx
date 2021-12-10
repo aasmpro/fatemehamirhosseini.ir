@@ -5,7 +5,7 @@ export const TransformText = ({ children }) => {
   return (
     <>
       {[...children].map((item) => (
-        <span className="transition duration-500 hover:text-green-300">
+        <span className="transition duration-500 hover:text-green-300 select-none">
           {item}
         </span>
       ))}

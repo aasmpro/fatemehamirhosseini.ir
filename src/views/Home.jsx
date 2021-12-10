@@ -10,7 +10,7 @@ import { Footer } from "../components/Footer";
 
 export const Home = () => {
   return (
-    <div className="min-h-screen w-8/12 m-auto">
+    <div className="min-h-screen md:w-8/12 m-auto md:px-0 px-5">
       <Header />
       <div className="py-10">
         <Hero />
