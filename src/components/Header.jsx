@@ -29,10 +29,10 @@ export const Header = ({ items }) => {
   }, []);
 
   return (
-    <div className="flex flex-row py-6 justify-between items-center text-lg">
+    <div className="flex flex-row pt-6 pb-8 px-6 lg:px-10 justify-between items-center text-lg">
       <Logo />
-      {items && items.length < 5 ? (
-        <div className="sm:flex sm:flex-row sm:space-x-2 md:space-x-8 hidden">
+      {items && items.length < 7 ? (
+        <div className="lg:flex lg:flex-row md:space-x-5 hidden">
           {items?.map((item) => (
             <div
               className={`px-2 transition rounded-full duration-300 hover:ring-2 hover:ring-${stg.theme_color}-300`}>

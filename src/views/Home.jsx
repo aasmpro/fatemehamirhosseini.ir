@@ -104,26 +104,28 @@ export const Home = () => {
 
   return (
     <>
-      <div className="min-h-screen md:w-8/12 m-auto md:px-0 px-5 print:hidden">
+      <div className="min-h-screen print:hidden overflow-x-hidden">
         <Header items={sections} />
-        <div className="py-10">
-          <Hero
-            image={profile_image?.url}
-            first_name={profile?.first_name}
-            last_name={profile?.last_name}
-            title={cover_letter?.title}
-            links={links}
-          />
-          {sections?.map((section) => (
-            <Section
-              id={getID(section.title)}
-              title={section.title}
-              icon={section.icon}
-              items={section.items}
-            />
-          ))}
+        <Hero
+          image={profile_image?.url}
+          first_name={profile?.first_name}
+          last_name={profile?.last_name}
+          title={cover_letter?.title}
+          links={links}
+        />
+        <div id="content" className="md:w-8/12 m-auto md:px-0 px-5">
+          <div className="py-10">
+            {sections?.map((section) => (
+              <Section
+                id={getID(section.title)}
+                title={section.title}
+                icon={section.icon}
+                items={section.items}
+              />
+            ))}
+          </div>
+          <Footer>{site_setting?.footer}</Footer>
         </div>
-        <Footer>{site_setting?.footer}</Footer>
       </div>
       <Resume />
     </>

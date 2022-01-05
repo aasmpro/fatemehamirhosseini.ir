@@ -10,7 +10,7 @@ export const TransformText = ({ children }) => {
       {children
         ? [...children].map((item) => (
             <span
-              className={`transition duration-500 hover:text-${stg.theme_color}-300 select-none`}>
+              className={`transition duration-500 hover:text-${stg.theme_color}-400 select-none`}>
               {item}
             </span>
           ))

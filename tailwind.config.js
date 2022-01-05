@@ -19,8 +19,11 @@ module.exports = {
       pattern: /border-.*-(300|500)/,
     },
     {
-      pattern: /text-.*-(300|600|700|900)/,
+      pattern: /text-.*-(300|400|600|700|900)/,
       variants: ["hover", "group-hover"],
+    },
+    {
+      pattern: /(from|to)-.*-(200|700)/,
     },
   ],
   darkMode: "media", // 'media' or 'class'
@@ -35,6 +38,22 @@ module.exports = {
       },
       screens: {
         print: { raw: "print" },
+      },
+      animation: {
+        tilt: "tilt 10s infinite linear",
+      },
+      keyframes: {
+        tilt: {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "50%": {
+            transform: "rotate(360deg)",
+          },
+          "100%": {
+            transform: "rotate(0deg)",
+          },
+        },
       },
     },
   },
