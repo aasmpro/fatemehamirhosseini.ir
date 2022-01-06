@@ -163,6 +163,16 @@ export const Resume = () => {
         </div>
       </div>
       <div className="border-b-2 my-5 border-black"></div>
+      {cover_letter?.description?.length > 0 ? (
+        <>
+          <div>
+            {cover_letter?.description?.map((line) => (
+              <p>{line}</p>
+            ))}
+          </div>
+          <div className="border-b-2 my-5 border-black"></div>
+        </>
+      ) : null}
       {sections?.map((section) => (
         <ResumeSection
           title={section.title}

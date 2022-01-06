@@ -5,12 +5,13 @@ import { API } from "../core/api";
 
 import { SettingsContext } from "../context/SettingsContext";
 
+import { useLoader } from "../hooks/useLoader";
 import { Header } from "../components/Header";
 import { Hero } from "../components/Hero";
+import { CoverLetter } from "../components/CoverLetter";
 import { Section } from "../components/Section";
 import { Footer } from "../components/Footer";
 import { Resume } from "../components/Resume";
-import { useLoader } from "../hooks/useLoader";
 
 export const Home = () => {
   const site_setting = useContext(SettingsContext);
@@ -127,6 +128,9 @@ export const Home = () => {
           links={links}
         />
         <div id="content" className="md:w-8/12 m-auto md:px-0 px-5">
+          {cover_letter?.description?.length > 0 ? (
+            <CoverLetter description={cover_letter?.description} />
+          ) : null}
           <div className="py-10">
             {sections?.map((section) => (
               <Section

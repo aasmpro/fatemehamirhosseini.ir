@@ -13,7 +13,7 @@ export const Hero = ({ image, first_name, last_name, title, links }) => {
       className="min-h-screen flex flex-col lg:flex-row flex-wrap items-center justify-center -mt-12">
       <div className="relative group">
         <div
-          class={`w-[280px] h-[280px] min-w-[280px] min-h-[280px] max-w-[280px] max-h-[280px] absolute -inset-0.5 bg-gradient-to-r from-${stg.theme_color}-800 to-${stg.theme_color}-300 rounded-full overflow-hidden mt-12 sm:mt-0 mx-3 -top-2 blur-md opacity-50 group-hover:opacity-75 transition duration-1000 group-hover:duration-200 animate-tilt`}></div>
+          class={`w-[280px] h-[280px] min-w-[280px] min-h-[280px] max-w-[280px] max-h-[280px] absolute -inset-0.5 bg-gradient-to-r from-${stg.theme_color}-800 to-${stg.theme_color}-300 rounded-full overflow-hidden mt-12 sm:mt-0 mx-3 -top-2 blur-lg opacity-70 group-hover:opacity-90 transition duration-1000 group-hover:duration-200 animate-tilt`}></div>
         <div
           className={`relative w-[250px] h-[250px] min-w-[250px] min-h-[250px] max-w-[250px] max-h-[250px] mb-10 mt-12 sm:mt-0 bg-${stg.theme_color}-300 rounded-full overflow-hidden mx-5 flex flex-col justify-center`}>
           <img
@@ -23,7 +23,7 @@ export const Hero = ({ image, first_name, last_name, title, links }) => {
           />
         </div>
       </div>
-      <div className="font-extrabold mx-5 lg:ml-10 mb-10 flex flex-col items-center lg:items-start">
+      <div className="relative font-extrabold mx-5 lg:ml-10 mb-10 flex flex-col items-center lg:items-start">
         <div className="sm:text-7xl sm:-mb-6 sm:-mt-2 text-5xl -mb-3">
           <TransformText>{first_name}</TransformText>
         </div>
