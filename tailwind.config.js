@@ -23,7 +23,7 @@ module.exports = {
       variants: ["hover", "group-hover"],
     },
     {
-      pattern: /(from|to)-.*-(200|700)/,
+      pattern: /(from|to)-.*-(300|800)/,
     },
   ],
   darkMode: "media", // 'media' or 'class'
