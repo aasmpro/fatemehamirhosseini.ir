@@ -10,9 +10,11 @@ import { Hero } from "../components/Hero";
 import { Section } from "../components/Section";
 import { Footer } from "../components/Footer";
 import { Resume } from "../components/Resume";
+import { useLoader } from "../hooks/useLoader";
 
 export const Home = () => {
   const site_setting = useContext(SettingsContext);
+  const [Loader, is_loaded, set_loader_value] = useLoader(100);
   const [profile_image, set_profile_image] = useState({});
   const [profile, set_profile] = useState({});
   const [cover_letter, set_cover_letter] = useState({});
@@ -25,6 +27,7 @@ export const Home = () => {
       .then((response) => {
         if (response.success) {
           set_profile_image(response.data);
+          set_loader_value(20);
         } else {
           console.log(response.message);
         }
@@ -40,6 +43,7 @@ export const Home = () => {
       .then((response) => {
         if (response.success) {
           set_profile(response.data);
+          set_loader_value(20);
         } else {
           console.log(response.message);
         }
@@ -55,6 +59,7 @@ export const Home = () => {
       .then((response) => {
         if (response.success) {
           set_cover_letter(response.data);
+          set_loader_value(20);
         } else {
           console.log(response.message);
         }
@@ -70,6 +75,7 @@ export const Home = () => {
       .then((response) => {
         if (response.success) {
           set_links(response.data);
+          set_loader_value(20);
         } else {
           console.log(response.message);
         }
@@ -85,6 +91,7 @@ export const Home = () => {
       .then((response) => {
         if (response.success) {
           set_sections(response.data);
+          set_loader_value(10);
         } else {
           console.log(response.message);
         }
@@ -100,11 +107,17 @@ export const Home = () => {
     getCoverLetter();
     getLinks();
     getSections();
+    set_loader_value(20, 5000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     <>
-      <div className="min-h-screen print:hidden overflow-x-hidden">
+      <Loader is_loaded={is_loaded} />
+      <div
+        className={`min-h-screen print:hidden overflow-x-hidden ${
+          is_loaded ? "" : "hidden"
+        }`}>
         <Header items={sections} />
         <Hero
           image={profile_image?.url}
