@@ -118,9 +118,9 @@ export const Resume = () => {
       <div className="flex flex-row flex-wrap items-start justify-between">
         <div className="flex flex-row flex-wrap items-start justify-start">
           <div
-            className={`w-[140px] h-[140px] min-w-[140px] min-h-[140px] max-w-[140px] max-h-[140px] bg-${stg.resume_color}-500 border-4 border-${stg.resume_color}-500 rounded-full overflow-hidden flex flex-col justify-center`}>
+            className={`w-[120px] h-[120px] min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-${stg.resume_color}-500 border-4 border-${stg.resume_color}-500 rounded-full overflow-hidden flex flex-col justify-center`}>
             <img
-              className="w-[140px] h-[140px] min-w-[140px] min-h-[140px] max-w-[140px] max-h-[140px] object-cover"
+              className="w-[120px] h-[120px] min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] object-cover"
               alt=" "
               src={getURL(profile_image?.url)}
             />
@@ -162,7 +162,7 @@ export const Resume = () => {
           ) : null}
         </div>
       </div>
-      <div className="border-b-2 my-5 border-black"></div>
+      <div className="border-b-2 my-4 border-black"></div>
       {cover_letter?.description?.length > 0 ? (
         <>
           <div>
@@ -170,7 +170,7 @@ export const Resume = () => {
               <p>{line}</p>
             ))}
           </div>
-          <div className="border-b-2 my-5 border-black"></div>
+          <div className="border-b-2 my-4 border-black"></div>
         </>
       ) : null}
       {sections?.map((section) => (
@@ -180,9 +180,9 @@ export const Resume = () => {
           items={section.items}
         />
       ))}
-      <div className="py-3">
-        <div className="text-2xl font-extrabold pb-2">
-          <i className="fas fa-language mr-3 text-[22px] select-none" />
+      <div className="py-1.5">
+        <div className="text-xl font-black pb-1">
+          <i className="fas fa-language mr-3 text-[20px] select-none" />
           Languages
         </div>
         <div className="flex flex-row">

@@ -14,13 +14,13 @@ export const ResumeSectionItem = ({
   const stg = useContext(SettingsContext);
 
   return (
-    <div className="py-1.5">
+    <div className="py-0.5">
       <div className="flex flex-row justify-between items-start">
         <div>
           <div className={`text-lg font-extrabold text-${stg.resume_color}-700`}>
             {title}
           </div>
-          <div className="text-md font-extrabold">{association}</div>
+          <div className="text-sm font-bold -mt-0.5">{association}</div>
         </div>
         <div className="text-right text-xs -space-y-0.5">
           <div className={`text-${stg.resume_color}-700`}>{from_date}</div>
@@ -30,7 +30,7 @@ export const ResumeSectionItem = ({
       </div>
       <div>
         {description ? (
-          <div className="pt-1">
+          <div className="pt-0.5">
             {description.map((line) => (
               <p>{line}</p>
             ))}
