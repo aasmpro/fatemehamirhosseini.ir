@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Switch, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 
 import { API } from "./core/api";
 import { SettingsContext } from "./context/SettingsContext";
@@ -32,10 +32,10 @@ export const Main = () => {
 
   return (
     <SettingsContext.Provider value={site_setting}>
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/*" component={NotFound} />
-      </Switch>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/*" element={<NotFound />} />
+      </Routes>
     </SettingsContext.Provider>
   );
 };

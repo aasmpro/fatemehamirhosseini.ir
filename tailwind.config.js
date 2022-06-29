@@ -1,7 +1,5 @@
 module.exports = {
-  mode: "jit",
   content: [
-    "./src/data/*.js",
     "./src/views/*.{js,jsx}",
     "./src/components/*.{js,jsx}",
     "./src/Main.jsx",
@@ -26,7 +24,6 @@ module.exports = {
       pattern: /(from|to)-.*-(300|800)/,
     },
   ],
-  darkMode: "media", // 'media' or 'class'
   theme: {
     extend: {
       colors: {
