@@ -42,7 +42,7 @@ export const Header = ({ items }) => {
         </div>
       ) : null}
       <div
-        className={`bg-${stg.theme_color}-300 cursor-pointer pl-1.5 pr-3 rounded-full transition duration-300 hover:ring-2 hover:ring-${stg.theme_color}-300 hover:bg-white text-${stg.theme_color}-900 whitespace-nowrap select-none`}>
+        className={`bg-${stg.theme_color}-300 cursor-pointer pl-1 pr-3 rounded-full transition duration-300 hover:ring-2 hover:ring-${stg.theme_color}-300 hover:bg-white text-${stg.theme_color}-900 whitespace-nowrap select-none`}>
         {resume_file?.url ? (
           <a href={getURL(resume_file.url)} target="_blank" rel="noreferrer">
             <i
