@@ -46,7 +46,7 @@ export const Hero = ({ image, first_name, last_name, title, links }) => {
       <div className="absolute bottom-10 hidden lg:block">
         <a href="#content" title="scroll down!">
           <span className="select-none px-2 text-2xl font-bold text-light-0 mr-3.5">
-            <span className="animate-bounce absolute mt-1">↓</span>
+            <span className="animate-bounce absolute mt-1"><i class="fa-solid fa-arrow-down-long"></i></span>
           </span>
         </a>
       </div>
